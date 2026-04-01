@@ -22,10 +22,10 @@ model_ml, model_nn, df_titanic = load_assets()
 # --- Sidebar ---
 st.sidebar.title("📑 Project Menu")
 page = st.sidebar.radio("Navigate to:", [
-    "1.ML Model: Development & Theory", 
-    "2.Neural Network: Development & Theory", 
-    "3.Test: Machine Learning", 
-    "4.Test: Neural Network"
+    "ML Model: Development & Theory", 
+    "Neural Network: Development & Theory", 
+    "Test: Machine Learning", 
+    "Test: Neural Network"
 ])
 
 if model_ml is None:
@@ -90,8 +90,7 @@ elif page == "2. Neural Network: Development & Theory":
     st.header("4. References")
     st.write("- Deep Learning Specialization (Coursera/DeepLearning.AI)")
     st.write("- TensorFlow/Keras Documentation: https://www.tensorflow.org/")
-    st.write("- Validation Process:Collected the obtained data, summarized the findings, and validated them using Google Gemini to ensure technical accuracy.")
-
+   
 # --- Pages 3 & 4 (Testing Pages) ---
 elif page == "3. Test: Machine Learning":
     st.title("🧪 Test: Ensemble ML")
