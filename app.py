@@ -22,10 +22,10 @@ model_ml, model_nn, df_titanic = load_assets()
 # --- Sidebar ---
 st.sidebar.title("📑 Project Menu")
 page = st.sidebar.radio("Navigate to:", [
-    "ML Model: Development & Theory", 
-    "Neural Network: Development & Theory", 
-    "Test: Machine Learning", 
-    "Test: Neural Network"
+    "1.ML Model: Development & Theory", 
+    "2.Neural Network: Development & Theory", 
+    "3.Test: Machine Learning", 
+    "4.Test: Neural Network"
 ])
 
 if model_ml is None:
@@ -80,8 +80,6 @@ elif page == "2. Neural Network: Development & Theory":
     - **Hidden Layers:** Two layers with 10 and 5 neurons respectively, using the **ReLU** activation function.
     - **Output Layer:** 1 Neuron with a **Sigmoid** activation function.
     """)
-    
-    # วิธีใส่รูปที่ถูกต้องใน Streamlit คือใช้ st.image พร้อม URL ครับ
     st.image("https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg", caption="ANN Architecture", width=500)
 
     st.header("3. Development Steps")
