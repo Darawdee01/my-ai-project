@@ -61,7 +61,7 @@ if page == "1. ML Model: Development & Theory":
     st.header("4. References")
     st.write("- Scikit-learn Documentation: https://scikit-learn.org/")
     st.write("- Titanic Dataset: https://www.kaggle.com/c/titanic")
-    st.write("- Validation Process:Collected the obtained data, summarized the findings, and validated them using Google Gemini to ensure technical accuracy.")
+
 # --- Page 2: Neural Network Detail ---
 elif page == "2. Neural Network: Development & Theory":
     st.title("📙 Neural Network Development Report")
