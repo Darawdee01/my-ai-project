@@ -99,7 +99,7 @@ elif page == "Test: Machine Learning":
 
 elif page == "Test: Neural Network":
     st.title("🔬 Test: Neural Network")
-     pclass = st.selectbox("Pclass", [1, 2, 3])
+    pclass = st.selectbox("Pclass", [1, 2, 3])
     age = st.slider("Age", 1, 100, 25)
     fare = st.number_input("Fare", value=30.0)
     if st.button("Run AI Analysis"):
