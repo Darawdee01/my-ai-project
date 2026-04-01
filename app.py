@@ -39,52 +39,60 @@ if page == "1. ML Model: Development & Theory":
     
     st.header("1. Data Pre-processing")
     st.write("""
-    - **Data Cleaning:** Handled missing values in the 'Age' column by imputing the mean value.
-    - **Feature Selection:** Selected 'Pclass', 'Age', and 'Fare' as primary predictors.
-    - **Data Scaling:** Normalized numerical inputs for better model performance.
+    - **Data Cleaning:** Handled missing values in the 'Age' column by imputing the mean value to maintain dataset size.
+    - **Feature Selection:** Selected 'Pclass', 'Age', and 'Fare' as primary predictors based on historical correlation with survival rates.
+    - **Data Scaling:** Normalized numerical inputs to ensure equal weight during model training.
     """)
 
     st.header("2. Algorithm Theory: Ensemble Learning")
-    st.info("**Voting Classifier (Ensemble):** Combines Logistic Regression, Random Forest, and SVM.")
+    st.info("**Voting Classifier (Ensemble):** This model combines multiple individual classifiers to make a final decision.")
+    st.write("""
+    We used a **Soft Voting** approach integrating three distinct algorithms:
+    - **Logistic Regression:** Provides a baseline probability for binary classification.
+    - **Random Forest:** A collection of decision trees that prevents overfitting.
+    - **SVM (Support Vector Machine):** Optimizes the decision boundary for better separation between 'Survived' and 'Not Survived'.
+    """)
 
     st.header("3. Development Steps")
     st.write("`Step 1` Data Splitting into Training and Testing sets.")
     st.write("`Step 2` Hyperparameter tuning for individual models.")
-    st.write("`Step 3` Implementing the Voting Classifier.")
+    st.write("`Step 3` Implementing the Voting Classifier to aggregate results.")
 
-    st.header("4. References & Data Validation")
-    st.write("- **Primary Source:** Titanic Dataset from Kaggle (https://www.kaggle.com/c/titanic)")
-    st.write("- **Methodology:** Scikit-learn Documentation (https://scikit-learn.org/)")
-    # เพิ่มบรรทัดที่คุณต้องการตรงนี้ครับ
-    st.success("✨ **Validation Process:** Collected the obtained data, summarized the findings, and validated them using **Google Gemini** to ensure technical accuracy.")
-
+    st.header("4. References")
+    st.write("- Scikit-learn Documentation: https://scikit-learn.org/")
+    st.write("- Titanic Dataset: https://www.kaggle.com/c/titanic")
 # --- Page 2: Neural Network Detail ---
 elif page == "2. Neural Network: Development & Theory":
     st.title("📙 Neural Network Development Report")
     st.markdown("---")
     
     st.header("1. Data Pre-processing")
-    st.write("- **Standardization:** Input features were scaled (0 to 1) for faster convergence.")
+    st.write("""
+    - **Encoding:** Categorical data like 'Pclass' was treated as numerical input.
+    - **Standardization:** Input features were scaled to a small range (0 to 1) to help the Neural Network converge faster during Gradient Descent.
+    """)
 
     st.header("2. Algorithm Theory: Artificial Neural Network (ANN)")
     st.write("""
-    Utilizes **Multi-layer Perceptron (MLP)**:
-    - **Input Layer:** 3 Neurons.
-    - **Hidden Layers:** 10 and 5 neurons with ReLU activation.
-    - **Output Layer:** 1 Neuron with Sigmoid activation.
+    The model utilizes a **Multi-layer Perceptron (MLP)** architecture, which mimics the human brain's processing:
+    - **Input Layer:** 3 Neurons corresponding to our features.
+    - **Hidden Layers:** Two layers with 10 and 5 neurons respectively, using the **ReLU** activation function.
+    - **Output Layer:** 1 Neuron with a **Sigmoid** activation function.
     """)
+    
+    # วิธีใส่รูปที่ถูกต้องใน Streamlit คือใช้ st.image พร้อม URL ครับ
     st.image("https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg", caption="ANN Architecture", width=500)
 
     st.header("3. Development Steps")
-    st.write("`Step 1` Defining Sequential architecture.")
-    st.write("`Step 2` Compiling with Adam Optimizer and Binary Cross-Entropy.")
+    st.write("`Step 1` Defining the Sequential architecture of the network.")
+    st.write("`Step 2` Compiling the model with the **Adam Optimizer** and **Binary Cross-Entropy** loss function.")
+    st.write("`Step 3` Training the model over multiple epochs to minimize prediction error.")
 
-    st.header("4. References & Data Validation")
-    st.write("- **Primary Source:** Deep Learning Theory via TensorFlow/Keras Documentation")
-    # เพิ่มบรรทัดที่คุณต้องการตรงนี้ด้วยครับ
-    st.success("✨ **Validation Process:** Collected the obtained data, summarized the findings, and validated them using **Google Gemini** to ensure technical accuracy.")
+    st.header("4. References")
+    st.write("- Deep Learning Specialization (Coursera/DeepLearning.AI)")
+    st.write("- TensorFlow/Keras Documentation: https://www.tensorflow.org/")
 
-# --- Pages 3 & 4 (Testing Pages - Code เดิม) ---
+# --- Pages 3 & 4 (Testing Pages) ---
 elif page == "3. Test: Machine Learning":
     st.title("🧪 Test: Ensemble ML")
     pclass = st.selectbox("Pclass", [1, 2, 3])
@@ -102,3 +110,4 @@ elif page == "4. Test: Neural Network":
     if st.button("Run AI Analysis"):
         res_nn = model_nn.predict([[pclass_nn, age_nn, fare_nn]])[0]
         st.info("AI Prediction: Survived" if res_nn==1 else "AI Prediction: Not Survived")
+
