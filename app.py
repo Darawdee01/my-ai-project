@@ -4,9 +4,8 @@ import pickle
 import tensorflow as tf
 import numpy as np
 
-# โหลดโมเดล
 with open('model_ml.pkl', 'rb') as f:
-    model_ml = pickle.dump(f) # แก้ไขจากเดิมเพื่อให้รันได้จริง
+    model_ml = pickle.load(f)
 model_nn = tf.keras.models.load_model('model_nn.h5')
 
 st.sidebar.title("📌 เมนู")
