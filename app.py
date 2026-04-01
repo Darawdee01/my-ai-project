@@ -22,10 +22,10 @@ model_ml, model_nn, df_titanic = load_assets()
 # --- Sidebar ---
 st.sidebar.title("📑 Project Menu")
 page = st.sidebar.radio("Navigate to:", [
-    "1. ML Model: Development & Theory", 
-    "2. Neural Network: Development & Theory", 
-    "3. Test: Machine Learning", 
-    "4. Test: Neural Network"
+    "ML Model: Development & Theory", 
+    "Neural Network: Development & Theory", 
+    "Test: Machine Learning", 
+    "Test: Neural Network"
 ])
 
 if model_ml is None:
@@ -59,9 +59,9 @@ if page == "1. ML Model: Development & Theory":
     st.write("`Step 3` Implementing the Voting Classifier to aggregate results.")
 
     st.header("4. References")
-    st.write("- Scikit-learn Documentation: https://scikit-learn.org/")
-    st.write("- Titanic Dataset: https://www.kaggle.com/c/titanic")
-    st.write("**Data Validation Process:** Collect the obtained data, summarize the findings, and validate them using **Google Gemini**.")
+    st.write("- **Scikit-learn Documentation:** https://scikit-learn.org/")
+    st.write("- **Titanic Dataset:** https://www.kaggle.com/c/titanic")
+    st.write("- **Data Validation Process:** Collect the obtained data, summarize the findings, and validate them using **Google Gemini**.")
 
 # --- Page 2: Neural Network Detail ---
 elif page == "2. Neural Network: Development & Theory":
@@ -90,7 +90,7 @@ elif page == "2. Neural Network: Development & Theory":
 
     st.header("4. References & Data Validation")
     st.write("- **Primary Source:** Deep Learning Theory via TensorFlow/Keras Documentation")
-    st.write("**Data Validation Process:** Collect the obtained data, summarize the findings, and validate them using **Google Gemini**.")
+    st.write("- **Data Validation Process:** Collect the obtained data, summarize the findings, and validate them using **Google Gemini**.")
    
 # --- Pages 3 & 4 (Testing Pages) ---
 elif page == "3. Test: Machine Learning":
