@@ -99,9 +99,9 @@ elif page == "Test: Machine Learning":
 
 elif page == "Test: Neural Network":
     st.title("🔬 Test: Neural Network")
-    pclass_nn = st.radio("Pclass", [1, 2, 3], horizontal=True)
-    age_nn = st.number_input("Age", value=25)
-    fare_nn = st.slider("Fare", 0, 500, 50)
+     pclass = st.selectbox("Pclass", [1, 2, 3])
+    age = st.slider("Age", 1, 100, 25)
+    fare = st.number_input("Fare", value=30.0)
     if st.button("Run AI Analysis"):
         res_nn = model_nn.predict([[pclass_nn, age_nn, fare_nn]])[0]
         st.info("AI Prediction: Survived" if res_nn==1 else "AI Prediction: Not Survived")
