@@ -77,13 +77,12 @@ elif page == "2. Neural Network: Development & Theory":
     st.write("""
     The model utilizes a **Multi-layer Perceptron (MLP)** architecture, which mimics the human brain's processing:
     - **Input Layer:** 3 Neurons corresponding to our features.
-    - **Hidden Layers:** Two layers with 10 and 5 neurons respectively, using the **ReLU** (Rectified Linear Unit) activation function to handle non-linearity.
-    - **Output Layer:** 1 Neuron with a **Sigmoid** activation function to output a probability between 0 and 1.
+    - **Hidden Layers:** Two layers with 10 and 5 neurons respectively, using the **ReLU** activation function.
+    - **Output Layer:** 1 Neuron with a **Sigmoid** activation function.
     """)
     
-
-[Image of Artificial Neural Network architecture]
-
+    # วิธีใส่รูปที่ถูกต้องใน Streamlit คือใช้ st.image พร้อม URL ครับ
+    st.image("https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg", caption="ANN Architecture", width=500)
 
     st.header("3. Development Steps")
     st.write("`Step 1` Defining the Sequential architecture of the network.")
