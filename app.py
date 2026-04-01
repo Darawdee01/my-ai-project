@@ -39,28 +39,24 @@ if page == "1. ML Model: Development & Theory":
     
     st.header("1. Data Pre-processing")
     st.write("""
-    - **Data Cleaning:** Handled missing values in the 'Age' column by imputing the mean value to maintain dataset size.
-    - **Feature Selection:** Selected 'Pclass', 'Age', and 'Fare' as primary predictors based on historical correlation with survival rates.
-    - **Data Scaling:** Normalized numerical inputs to ensure equal weight during model training.
+    - **Data Cleaning:** Handled missing values in the 'Age' column by imputing the mean value.
+    - **Feature Selection:** Selected 'Pclass', 'Age', and 'Fare' as primary predictors.
+    - **Data Scaling:** Normalized numerical inputs for better model performance.
     """)
 
     st.header("2. Algorithm Theory: Ensemble Learning")
-    st.info("**Voting Classifier (Ensemble):** This model combines multiple individual classifiers to make a final decision.")
-    st.write("""
-    We used a **Soft Voting** approach integrating three distinct algorithms:
-    - **Logistic Regression:** Provides a baseline probability for binary classification.
-    - **Random Forest:** A collection of decision trees that prevents overfitting.
-    - **SVM (Support Vector Machine):** Optimizes the decision boundary for better separation between 'Survived' and 'Not Survived'.
-    """)
+    st.info("**Voting Classifier (Ensemble):** Combines Logistic Regression, Random Forest, and SVM.")
 
     st.header("3. Development Steps")
     st.write("`Step 1` Data Splitting into Training and Testing sets.")
     st.write("`Step 2` Hyperparameter tuning for individual models.")
-    st.write("`Step 3` Implementing the Voting Classifier to aggregate results.")
+    st.write("`Step 3` Implementing the Voting Classifier.")
 
-    st.header("4. References")
-    st.write("- Scikit-learn Documentation: https://scikit-learn.org/")
-    st.write("- Titanic Dataset: https://www.kaggle.com/c/titanic")
+    st.header("4. References & Data Validation")
+    st.write("- **Primary Source:** Titanic Dataset from Kaggle (https://www.kaggle.com/c/titanic)")
+    st.write("- **Methodology:** Scikit-learn Documentation (https://scikit-learn.org/)")
+    # ปรับเป็นข้อความปกติครับ
+    st.write("**Data Validation Process:** Collect the obtained data, summarize the findings, and validate them using **Google Gemini**.")
 
 # --- Page 2: Neural Network Detail ---
 elif page == "2. Neural Network: Development & Theory":
@@ -68,28 +64,25 @@ elif page == "2. Neural Network: Development & Theory":
     st.markdown("---")
     
     st.header("1. Data Pre-processing")
-    st.write("""
-    - **Encoding:** Categorical data like 'Pclass' was treated as numerical input.
-    - **Standardization:** Input features were scaled to a small range (0 to 1) to help the Neural Network converge faster during Gradient Descent.
-    """)
+    st.write("- **Standardization:** Input features were scaled (0 to 1) for faster convergence.")
 
     st.header("2. Algorithm Theory: Artificial Neural Network (ANN)")
     st.write("""
-    The model utilizes a **Multi-layer Perceptron (MLP)** architecture, which mimics the human brain's processing:
-    - **Input Layer:** 3 Neurons corresponding to our features.
-    - **Hidden Layers:** Two layers with 10 and 5 neurons respectively, using the **ReLU** activation function.
-    - **Output Layer:** 1 Neuron with a **Sigmoid** activation function.
+    Utilizes **Multi-layer Perceptron (MLP)**:
+    - **Input Layer:** 3 Neurons.
+    - **Hidden Layers:** 10 and 5 neurons with ReLU activation.
+    - **Output Layer:** 1 Neuron with Sigmoid activation.
     """)
     st.image("https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg", caption="ANN Architecture", width=500)
 
     st.header("3. Development Steps")
-    st.write("`Step 1` Defining the Sequential architecture of the network.")
-    st.write("`Step 2` Compiling the model with the **Adam Optimizer** and **Binary Cross-Entropy** loss function.")
-    st.write("`Step 3` Training the model over multiple epochs to minimize prediction error.")
+    st.write("`Step 1` Defining Sequential architecture.")
+    st.write("`Step 2` Compiling with Adam Optimizer and Binary Cross-Entropy.")
 
-    st.header("4. References")
-    st.write("- Deep Learning Specialization (Coursera/DeepLearning.AI)")
-    st.write("- TensorFlow/Keras Documentation: https://www.tensorflow.org/")
+    st.header("4. References & Data Validation")
+    st.write("- **Primary Source:** Deep Learning Theory via TensorFlow/Keras Documentation")
+    # ปรับเป็นข้อความปกติครับ
+    st.write("**Data Validation Process:** Collect the obtained data, summarize the findings, and validate them using **Google Gemini**.")
    
 # --- Pages 3 & 4 (Testing Pages) ---
 elif page == "3. Test: Machine Learning":
