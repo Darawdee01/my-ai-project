@@ -3,7 +3,6 @@ import pandas as pd
 import pickle
 import numpy as np
 
-# --- Page Configuration ---
 st.set_page_config(page_title="AI Development Report", layout="wide")
 
 def load_assets():
@@ -19,7 +18,6 @@ def load_assets():
 
 model_ml, model_nn, df_titanic = load_assets()
 
-# --- Sidebar ---
 st.sidebar.title("📑 Project Menu")
 page = st.sidebar.radio("Navigate to:", [
     "ML Model: Development & Theory", 
@@ -32,7 +30,6 @@ if model_ml is None:
     st.error("Error: Required files (models/dataset) are missing in the repository.")
     st.stop()
 
-# --- Page 1: Machine Learning Detail ---
 if page == "ML Model: Development & Theory":
     st.title("📘 Machine Learning Development Report")
     st.markdown("---")
@@ -63,7 +60,6 @@ if page == "ML Model: Development & Theory":
     st.write("- Titanic Dataset: https://www.kaggle.com/c/titanic")
     st.write("- Data Validation Process: Collect the obtained data, summarize the findings, and validate them using Google Gemini.")
 
-# --- Page 2: Neural Network Detail ---
 elif page == "Neural Network: Development & Theory":
     st.title("📙 Neural Network Development Report")
     st.markdown("---")
@@ -91,8 +87,7 @@ elif page == "Neural Network: Development & Theory":
     st.header("4. References & Data Validation")
     st.write("- Primary Source: Deep Learning Theory via TensorFlow/Keras Documentation")
     st.write("- Data Validation Process: Collect the obtained data, summarize the findings, and validate them using Google Gemini.")
-   
-# --- Pages 3 & 4 (Testing Pages) ---
+
 elif page == "Test: Machine Learning":
     st.title("🧪 Test: Ensemble ML")
     pclass = st.selectbox("Pclass", [1, 2, 3])
