@@ -33,7 +33,7 @@ if model_ml is None:
     st.stop()
 
 # --- Page 1: Machine Learning Detail ---
-if page == "1. ML Model: Development & Theory":
+if page == "ML Model: Development & Theory":
     st.title("📘 Machine Learning Development Report")
     st.markdown("---")
     
@@ -64,7 +64,7 @@ if page == "1. ML Model: Development & Theory":
     st.write("- Data Validation Process: Collect the obtained data, summarize the findings, and validate them using Google Gemini.")
 
 # --- Page 2: Neural Network Detail ---
-elif page == "2. Neural Network: Development & Theory":
+elif page == "Neural Network: Development & Theory":
     st.title("📙 Neural Network Development Report")
     st.markdown("---")
     
@@ -93,7 +93,7 @@ elif page == "2. Neural Network: Development & Theory":
     st.write("- Data Validation Process: Collect the obtained data, summarize the findings, and validate them using Google Gemini.")
    
 # --- Pages 3 & 4 (Testing Pages) ---
-elif page == "3. Test: Machine Learning":
+elif page == "Test: Machine Learning":
     st.title("🧪 Test: Ensemble ML")
     pclass = st.selectbox("Pclass", [1, 2, 3])
     age = st.slider("Age", 1, 100, 25)
@@ -102,7 +102,7 @@ elif page == "3. Test: Machine Learning":
         res = model_ml.predict([[pclass, age, fare]])[0]
         st.success("Result: Survived" if res==1 else "Result: Not Survived")
 
-elif page == "4. Test: Neural Network":
+elif page == "Test: Neural Network":
     st.title("🔬 Test: Neural Network")
     pclass_nn = st.radio("Pclass", [1, 2, 3], horizontal=True)
     age_nn = st.number_input("Age", value=25)
