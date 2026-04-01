@@ -61,7 +61,7 @@ if page == "1. ML Model: Development & Theory":
     st.header("4. References")
     st.write("- Scikit-learn Documentation: https://scikit-learn.org/")
     st.write("- Titanic Dataset: https://www.kaggle.com/c/titanic")
-    st.write("Collect the obtained data, summarize the findings, and validate them using Google Gemini")
+    st.write("- Collect the obtained data, summarize the findings, and validate them using Google Gemini")
 
 # --- Page 2: Neural Network Detail ---
 elif page == "2. Neural Network: Development & Theory":
@@ -93,7 +93,7 @@ elif page == "2. Neural Network: Development & Theory":
     st.header("4. References")
     st.write("- Deep Learning Specialization (Coursera/DeepLearning.AI)")
     st.write("- TensorFlow/Keras Documentation: https://www.tensorflow.org/")
-    st.write("Collect the obtained data, summarize the findings, and validate them using Google Gemini")
+    st.write("- Collect the obtained data, summarize the findings, and validate them using Google Gemini")
 
 # --- Pages 3 & 4 (Testing Pages) ---
 elif page == "3. Test: Machine Learning":
